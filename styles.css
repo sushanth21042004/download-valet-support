@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+  --ink: #fff8f3;
+  --muted: #c9bac6;
+  --plum: #6f1f78;
+  --deep: #140d1b;
+  --panel: rgba(34, 24, 37, .78);
+  --apricot: #ff9b61;
+  --rose: #d95f8d;
+  --line: rgba(255, 155, 97, .25);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 5%, rgba(111, 31, 120, .55), transparent 34rem),
+    radial-gradient(circle at 95% 85%, rgba(255, 117, 77, .25), transparent 32rem),
+    var(--deep);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+}
+
+a { color: #ffb07e; }
+.wrap { width: min(920px, calc(100% - 40px)); margin: auto; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 750; }
+.brand img { width: 42px; height: 42px; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+.links { display: flex; gap: 22px; }
+.links a { color: var(--muted); text-decoration: none; }
+.links a:hover { color: var(--ink); }
+main { padding: 70px 0 90px; }
+.eyebrow { color: var(--apricot); text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 800; }
+h1 { max-width: 760px; margin: 10px 0 18px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: .98; letter-spacing: -.055em; }
+h2 { margin-top: 42px; font-size: 1.55rem; }
+.lead { max-width: 720px; color: var(--muted); font-size: 1.22rem; }
+.card { margin-top: 42px; padding: clamp(24px, 5vw, 46px); border: 1px solid var(--line); border-radius: 28px; background: var(--panel); box-shadow: 0 28px 80px rgba(0,0,0,.28); backdrop-filter: blur(20px); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
+.pill { padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.035); }
+.pill strong { display: block; color: var(--apricot); }
+.button { display: inline-block; margin-top: 22px; padding: 12px 18px; color: #1d1019; background: linear-gradient(135deg, var(--apricot), #ffbf83); border-radius: 12px; text-decoration: none; font-weight: 750; }
+footer { padding: 28px 0 38px; border-top: 1px solid rgba(255,255,255,.08); color: var(--muted); font-size: .9rem; }
+ul { padding-left: 1.2em; }
+code { color: #ffc19c; }
+@media (max-width: 680px) { .grid { grid-template-columns: 1fr; } .links { gap: 12px; font-size: .9rem; } main { padding-top: 40px; } }
